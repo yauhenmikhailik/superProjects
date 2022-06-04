@@ -1,0 +1,16 @@
+{% extends 'apple.html' %}
+
+
+  {% block content %}
+    {% for prod in products %}
+    <div class="item_img">
+        <a href="{% url 'apple:product_detail' prod.id %}">
+        <img src="{{ prod.image.url}}" alt="" class="img">
+        <p>{{ prod.title }}</p>
+        <p>{{ prod.created }}</p>
+        <p>{{ prod.categories }}</p>
+        <p>{{ prod.kind }}</p>
+        <p>{{ prod.price }}</p>
+    </div>
+    {% endfor %}
+    {% endblock %}

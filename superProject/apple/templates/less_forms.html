@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>less-forms</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        </head>
+
+
+    <body>
+
+<div class="ttl">
+    <h1>Форма class FORM</h1>
+    <form action="{% url 'apple:form_category' %}" method="POST">
+        {% csrf_token %}
+        {{ errors }}
+        {{ form.as_p }}
+
+        <button>Ok Form</button>
+    </form>
+
+</div>
+</body>
+</html>
+

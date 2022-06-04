@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+<h1>hello main</h1>
+{% for i in droids %}
+
+<div style="border:1px solid red;">
+
+    <p>{{ i.name }}</p>
+    <p>{{ i.master }}</p>
+    <p>{{ i.planet }}</p>
+    <img src="{{i.image.url}}">
+
+
+
+</div>
+{% endfor %}
+<div style="border:2px solid red;">
+    <h1>Hello div 2</h1>
+
+
+</div>
+
+</body>
+</html>

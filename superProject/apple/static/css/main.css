@@ -1,0 +1,90 @@
+
+body{
+    margin: 15;
+    padding: 5;
+
+}
+
+#header{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 80%;
+    height: 180px;
+    border-radius: 15%;
+    background: #E7EEDF;
+}
+
+.header_logo{
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    border-radius: 15%;
+}
+
+.apple{
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color:black;
+
+}
+.main{
+    display:table;
+    display-content: center;
+    width:80%;
+    height: 500px;
+    margin:10px auto;
+    background: #9EAC8E;
+}
+.nav_ul{
+    display:flex;
+    list-style:none;
+
+}
+.nav_ul li{
+    padding:10px;
+}
+.nav_ul a{
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px
+}
+
+.item_img{
+    width:290px;
+    height:400px;
+    margin:20px;
+    background: red;
+    float: left;
+}
+.img{
+    width:250px;
+    padding:2px;
+    height:200px;
+
+}
+
+
+
+.nav{
+    width:80%;
+    margin:10px auto;
+    background: #888E80;
+}
+.navigation_li{
+}
+
+.forms{
+    margin:35px;
+    border: 7px solid black;
+    background: #33CED1;
+
+}
+
+.ttl{
+    text-align:center;
+}

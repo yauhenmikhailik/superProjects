@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Market_Python</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+<header id="header">
+    <div class="apple">
+        <img src="{% static 'img/logo.jpg'%}" alt="" class="header_logo"></div>
+    <strong>Hello</strong>
+    <div class="apple"><a href="{% url 'apple:form_model' %}">Модель </a></div>
+    <div class="apple"><a href="{% url 'apple:less_forms' %}">Форма для добавления товаров</a></div>
+</header>
+<nav class="nav">
+    <ul class="nav_ul">
+        <li class="navigation_li"><a href="{% url 'apple:apple_page' %}">Все</a></li>
+        {% for cat in categories %}
+        <li class="navigation_li"><a href="{% url 'apple:category_sort' cat.id %}"> {{cat.name}} </a></li>
+        {% endfor %}
+
+
+
+    </ul>
+</nav>
+<main class="main">
+    {% block content %}
+    {% for prod in products %}
+
+    <div class="item_img">
+        <a href="{% url 'apple:product_detail' prod.id %}">
+        <img src="{{ prod.image.url}}" alt="не найдено" class="img">
+        <p>{{ prod.title }}</p>
+        <p>{{ prod.created }}</p>
+        <p>{{ prod.categories }}</p>
+        <p>{{ prod.kind }}</p>
+        <p>Цена {{ prod.price }} $</p>
+            </a>
+    </div>
+    {% endfor %}
+    {% endblock %}
+
+
+
+</main>
+</body>
+
+
+
+
+</html>

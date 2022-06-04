@@ -1,0 +1,20 @@
+{% extends 'apple.html' %}
+
+
+{% block content %}
+<h>Детализация товара</h>
+    <div class="item_img">
+
+        <img src="{{ product.image.url}}" alt="" class="img">
+        <p>{{ product.title }}</p>
+        <p>{{ product.created }}</p>
+        <p>{{ product.categories }}</p>
+        <p>{{ product.kind }}</p>
+        <p>{{ product.price }}</p>
+        {% for m in shops %}
+            <p>{{ m.name }}</p>
+        {% endfor %}
+
+    </div>
+
+    {% endblock %}

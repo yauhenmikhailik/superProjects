@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<form action="{% url 'apple:form_category' %}" method="POST">
+        {% csrf_token %}
+        {{ errors }}
+        {{ form.as_p }}
+
+        <button>Ok Form</button>
+    </form>
+
+
+</body>
+</html>
