@@ -10,3 +10,8 @@ class Person(models.Model):
 
     def __str__(self):
         return self.nik_name
+
+
+class A(models.Model):
+    name = models.CharField(max_length=30, verbose_name="Имя профиля")
+    age = models.PositiveIntegerField

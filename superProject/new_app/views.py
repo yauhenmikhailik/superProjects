@@ -43,3 +43,7 @@ def form_save(request):
         if Person.objects.create(nik_name=name,login=title, password=password,avatar=avatar):
             return redirect('new_app:index.html')
 
+
+def work_with_product(request):
+    products = Person.objects.all()
+    return render(request, 'work_with_product.html')
